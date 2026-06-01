@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIX NOTE サポート</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111317;
+      --panel: #1a1d24;
+      --panel-strong: #222733;
+      --text: #f4f6f8;
+      --muted: #b8bec8;
+      --accent: #d7ff35;
+      --accent-pink: #ff4e9a;
+      --accent-blue: #49d7ff;
+      --line: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(145deg, rgba(73, 215, 255, 0.06), transparent 30%),
+        linear-gradient(315deg, rgba(255, 78, 154, 0.06), transparent 34%),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.8;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    header {
+      margin-bottom: 28px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(26, 29, 36, 0.84);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .mark {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 10px 0 0 var(--accent-pink), 20px 0 0 var(--accent-blue);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 7vw, 56px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(26, 29, 36, 0.74);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 1.25em;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--panel-strong);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .note {
+      border-color: rgba(215, 255, 53, 0.35);
+      background: rgba(215, 255, 53, 0.08);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand"><span class="mark"></span>MIX NOTE</div>
+      <h1>サポート</h1>
+      <p class="lead">MIX NOTEの使い方、不具合、公開前の確認に関するサポートページです。</p>
+    </header>
+
+    <section>
+      <h2>アプリ概要</h2>
+      <p>MIX NOTEは、シーシャ店舗向けのレシピ管理アプリです。レシピ、フレーバー、スタッフ、マイリスト、タイマー、ミックスカードなどを使って、店内のMIX運用をスムーズにします。</p>
+      <div class="grid">
+        <div class="card">
+          <h3>レシピ管理</h3>
+          <p>フレーバー、配合、タグ、メモ、レイヤーなどを記録できます。</p>
+        </div>
+        <div class="card">
+          <h3>店舗内共有</h3>
+          <p>CloudKit共有により、将来的にスタッフ間で店舗データを共有できます。</p>
+        </div>
+        <div class="card">
+          <h3>ミックスカード</h3>
+          <p>配合を出さずに、お客さん向けのMIX紹介カードを画像として保存・シェアできます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>基本的な使い方</h2>
+      <ol>
+        <li>スタッフを選択してホーム画面へ進みます。</li>
+        <li>「トウロク」からレシピ名、フレーバー、MIX、メモを入力します。</li>
+        <li>レシピ詳細で配合やメモを確認し、必要に応じて編集・複製・削除します。</li>
+        <li>よく使うレシピはマイリストへ追加できます。</li>
+        <li>タイマー機能を使ってセッション時間を管理できます。</li>
+        <li>必要に応じて、ミックスカードを作成して画像保存・シェアできます。</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>困ったとき</h2>
+      <h3>データが見つからない場合</h3>
+      <p>アプリの再起動、端末の空き容量、iCloudのログイン状態を確認してください。CloudKit共有機能を使っている場合は、共有への参加状態も確認してください。</p>
+
+      <h3>画像保存ができない場合</h3>
+      <p>iOSの設定アプリから、MIX NOTEの写真ライブラリへの追加権限を確認してください。</p>
+
+      <h3>CloudKit共有が使えない場合</h3>
+      <p>iCloudにログインしているか、iCloud Driveが利用可能か、通信状態が安定しているかを確認してください。</p>
+    </section>
+
+    <section class="note">
+      <h2>問い合わせ先</h2>
+      <p>不具合報告、使い方の質問、サポート依頼は、以下のメールアドレスまでご連絡ください。</p>
+      <p><a href="mailto:royalhoneys2026@gmail.com">royalhoneys2026@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>関連ページ</h2>
+      <p><a href="./privacy.html">プライバシーポリシーを見る</a></p>
+    </section>
+
+    <footer>
+      &copy; 2026 MIX NOTE
+    </footer>
+  </main>
+</body>
+</html>
